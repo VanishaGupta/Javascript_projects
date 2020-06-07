@@ -1,5 +1,5 @@
 # Javascript_projects
-Javascript projects made by me.
+Javascript projects made by me, using HTML, CSS and Javascript.
 
 
 Rock Paper Scissors:   
