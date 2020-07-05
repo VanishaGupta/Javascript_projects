@@ -9,7 +9,6 @@ const result_div=document.querySelector(".result > p");
 const rock_div=document.getElementById("r");
 const paper_div=document.getElementById("p");
 const scissors_div=document.getElementById("s");
-//getting reference to entire DOM in starting = caching DOM.
 
 function convertToWord(letter)
 {
@@ -36,7 +35,9 @@ function win(userChoice,computerchoice){
     let smallUserWord="user".fontsize(3).sup();
     let smallCompWord="comp".fontsize(3).sup();
     document.getElementById(userChoice).classList.add("green-glow");
-    setTimeout(() => document.getElementById(userChoice).classList.remove("green-glow"),1500);
+    setTimeout(function(){
+        document.getElementById(userChoice).classList.remove("green-glow");
+    },1500);
     result_div.innerHTML=convertToWord(userChoice)+smallUserWord+" beat "+convertToWord(computerchoice)+smallCompWord+". You win! ";
 }
 
@@ -47,8 +48,10 @@ function loose(userChoice,computerchoice){
     let smallUserWord="user".fontsize(3).sup();
     let smallCompWord="comp".fontsize(3).sup();
     document.getElementById(userChoice).classList.add("red-glow");
-    setTimeout(() =>  document.getElementById(userChoice).classList.remove("red-glow"),2);
-    result_div.innerHTML=convertToWord(computerchoice)+smallUserWord+" beats "+convertToWord(userChoice)+smallCompWord +" computer wins!";
+    setTimeout(function(){
+        document.getElementById(userChoice).classList.remove("red-glow");
+    },2);
+    result_div.innerHTML=convertToWord(computerchoice)+smallCompWord+" beats "+convertToWord(userChoice)+smallUserWord +" computer wins!";
 }
 
 function draw(userChoice,computerchoice){
@@ -56,7 +59,9 @@ function draw(userChoice,computerchoice){
     let smallUserWord="user".fontsize(3).sup();
     let smallCompWord="comp".fontsize(3).sup();
     document.getElementById(userChoice).classList.add("gray-glow");
-    setTimeout(() => document.getElementById(userChoice).classList.remove("gray-glow"),2);
+    setTimeout(function(){
+        document.getElementById(userChoice).classList.remove("gray-glow");
+    },2);
     result_div.innerHTML=convertToWord(userChoice)+smallUserWord+" and "+convertToWord(computerchoice) +smallCompWord+ " are equal It's a tie!";
 }
 
@@ -87,15 +92,23 @@ function game(userChoice){
             break;
     }
 }
-
+//getting reference to entire DOM in starting = caching DOM.
 function main(){
 
-    rock_div.addEventListener('click',() => game("r"));
-     
-    paper_div.addEventListener('click',() =>   game("p"));
+    rock_div.addEventListener('click',function(){
+        console.log("Clicked on rock!");
+        game("r");
+    })
     
-    scissors_div.addEventListener('click',() =>  game("s"));
+    paper_div.addEventListener('click',function(){
+        console.log("Clicked on paper!");
+        game("p");
+    })
     
+    scissors_div.addEventListener('click',function(){
+        console.log("Clicked on scissor!");
+        game("s");
+    })
 }
 
 main();
