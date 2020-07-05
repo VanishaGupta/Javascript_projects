@@ -1,5 +1,5 @@
 body{
-    background-color: aqua;
+    background-image: linear-gradient(blue, green,white,green,blue  );
 }
 
 .container{
@@ -11,7 +11,7 @@ body{
     color: black;
     overflow-y: auto;
     height: 600px;
-    border: 10px solid blue;
+    border: 10px solid black;
     border-radius: 10px;
 }
 
@@ -33,7 +33,6 @@ body{
 
 .container ul li{
     list-style: none;
-    border: 2px solid orangered;
     width: 80%;
     opacity: 0;
     transition: opacity 05.s ease-in-out;
