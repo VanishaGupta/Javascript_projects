@@ -154,3 +154,20 @@ i {
 
 .winner { background-color: #80c70d; }
 .winner .player-name { font-weight: 300; color: green; }
+.winning-score {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top:520px;
+    color: #555;
+    font-size: 18px;
+    padding: 10px 10px;
+    font-variant: small-caps;
+    border: 1px solid salmon;
+    box-shadow: 2px solid salmon;}
+
+    #dice1{
+        top:150px;
+     }
+
+    #dice2 { top:260px;}
