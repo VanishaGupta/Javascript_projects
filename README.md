@@ -2,12 +2,11 @@
 Javascript projects made by me, using HTML, CSS and Javascript.
 
 
-**Rock Paper Scissors**   
+**Rock Paper Scissors**   Play the game you vs computer.
 ![image](https://user-images.githubusercontent.com/15194083/83962682-11d9e780-a8bd-11ea-9fd0-174eae2cd1d4.png)   
 
 **To Do Application**    
-![image](https://user-images.githubusercontent.com/15194083/83962601-49945f80-a8bc-11ea-93bd-6b5ad3280f90.png)
-
+![image](https://user-images.githubusercontent.com/15194083/86525906-aaf32280-beaa-11ea-9a1e-7c36db704aaf.png)
 
 **The Pig Game**
 Each turn, a player repeatedly rolls a die until either a 1 is rolled or the player decides to "hold":
